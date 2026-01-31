@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإرهاب والتطرف الفكري - بحث أكاديمي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary-dark: #0c2d48;
+            --secondary-dark: #145da0;
+            --accent-blue: #2e8bc0;
+            --light-blue: #b1d4e0;
+            --cream: #f8f5f1;
+            --dark-gray: #2c3e50;
+            --medium-gray: #5d6d7e;
+            --light-gray: #ecf0f1;
+            --border: #d6dbdf;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-heavy: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* University Logos Banner */
+        .university-banner {
+            background-color: white;
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .logos-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .zewail-logo {
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .zewail-logo img {
+            height: 100%;
+            width: auto;
+        }
+        
+        .national-logo {
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .national-logo img {
+            height: 100%;
+            width: auto;
+        }
+        
+        /* Typography */
+        h1, h2, h3, h4, h5 {
+            color: var(--primary-dark);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 20px;
+        }
+        
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to left, var(--accent-blue), var(--secondary-dark));
+            border-radius: 2px;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-blue);
+            position: relative;
+        }
+        
+        h2:before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 100px;
+            height: 2px;
+            background-color: var(--accent-blue);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            color: var(--secondary-dark);
+        }
+        
+        h4 {
+            font-size: 1.25rem;
+            margin: 1.5rem 0 0.8rem;
+            color: var(--medium-gray);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            text-align: justify;
+            color: #444;
+        }
+        
+        strong {
+            color: var(--primary-dark);
+            font-weight: 700;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            color: white;
+            padding: 2.5rem 0;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        /* Authors Section */
+        .authors-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            position: relative;
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .authors-title {
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        
+        .author-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border-right: 3px solid var(--accent-blue);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .author-box:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .author-leader {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-right: 3px solid #f39c12;
+            position: relative;
+        }
+        
+        .leader-badge {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            background-color: #f39c12;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .supervisor-section {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            font-size: 1.1rem;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+            background-color: white;
+        }
+        
+        .content-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .content-section:hover {
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .idea-section {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            border-right: 5px solid var(--accent-blue);
+        }
+        
+        .idea-number {
+            display: inline-block;
+            background-color: var(--accent-blue);
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+        
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            height: 250px;
+            transition: var(--transition);
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .image-1 {
+            background: linear-gradient(rgba(12, 45, 72, 0.85), rgba(12, 45, 72, 0.7)), url('https://images.unsplash.com/photo-1588681664899-f142ff2dc9b1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .image-2 {
+            background: linear-gradient(rgba(20, 93, 160, 0.85), rgba(20, 93, 160, 0.7)), url('https://images.unsplash.com/photo-1562564055-71e1d37a9d30?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Causes Section */
+        .causes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .cause-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--secondary-dark);
+            transition: var(--transition);
+        }
+        
+        .cause-item:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .cause-icon {
+            font-size: 1.8rem;
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+        
+        /* Role Section */
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .role-card {
+            background: linear-gradient(145deg, white, #f5f7fa);
+            padding: 1.8rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        
+        .role-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-heavy);
+            border-color: var(--accent-blue);
+        }
+        
+        .role-icon {
+            font-size: 2rem;
+            color: var(--secondary-dark);
+            margin-bottom: 1rem;
+        }
+        
+        /* Conclusion */
+        .conclusion-section {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .conclusion-section h2 {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.3);
+        }
+        
+        .conclusion-section h2:before {
+            background-color: var(--light-blue);
+        }
+        
+        .conclusion-section p {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-gray);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .download-section {
+            margin-top: 2rem;
+            background-color: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+        }
+        
+        .download-btn {
+            background: linear-gradient(to right, var(--accent-blue), var(--secondary-dark));
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(46, 139, 192, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(46, 139, 192, 0.4);
+            background: linear-gradient(to right, var(--secondary-dark), var(--primary-dark));
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .authors-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cause-items, .roles-grid, .causes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logos-container {
+                justify-content: center;
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .content-section {
+                padding: 1.5rem;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .conclusion-section {
+                padding: 2rem;
+            }
+            
+            .zewail-logo, .national-logo {
+                height: 60px;
+            }
+            
+            .authors-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+                padding: 0 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logos-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .zewail-logo, .national-logo {
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- University Logos Banner -->
+    <div class="university-banner">
+        <div class="container">
+            <div class="logos-container">
+                <div class="zewail-logo">
+                    <!-- شعار مدينة زويل للعلوم والتكنولوجيا -->
+                    <img src="uni.png" alt="شعار مدينة زويل للعلوم والتكنولوجيا">
+                </div>
+                <div class="national-logo">
+                    <!-- الشعار الوطني -->
+                    <img src="images.jpg" alt="الشعار الوطني">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="university-header" style="text-align: center; margin-bottom: 1.5rem;">
+                <div style="font-size: 1.8rem; font-weight: 700; margin-bottom: 0.5rem;">جامعة زويل للعلوم والتكنولوجيا</div>
+                <div style="font-size: 1.2rem; opacity: 0.9;">الدفاع الشعبي - قسم الدراسات الأمنية</div>
+            </div>
+            
+            <h1>التطرف الفكري والإرهاب</h1>
+            
+            <!-- Authors Box -->
+            <div class="authors-container">
+                <h3 class="authors-title">فريق البحث</h3>
+                <div class="authors-grid">
+                    <div class="author-box author-leader">
+                        <div class="leader-badge">قائد المجموعة</div>
+                        <div style="font-weight: 600; margin-bottom: 5px;">محمود جمال</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">215</div>
+                    </div>
+                    <div class="author-box">زيد جمال<br><span style="font-size: 0.9rem; opacity: 0.9;">118</span></div>
+                    <div class="author-box">كريم إيهاب<br><span style="font-size: 0.9rem; opacity: 0.9;">119</span></div>
+                    <div class="author-box">زيد عاطف<br><span style="font-size: 0.9rem; opacity: 0.9;">117</span></div>
+                    <div class="author-box">ياسين محمد بالل<br><span style="font-size: 0.9rem; opacity: 0.9;">120</span></div>
+                    <div class="author-box">يوسف محمد عوض<br><span style="font-size: 0.9rem; opacity: 0.9;">216</span></div>
+                </div>
+                <div class="supervisor-section">
+                    <strong>تحت اشراف:</strong> العقيد/مصطفى أحمد عبد الحميد
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- المقدمة -->
+            <section class="content-section">
+                <h2>المقدمة</h2>
+                <div class="idea-section">
+                    <p>التطرف والإرهاب من أخطر الظواهر التي تواجهنا اليوم. هذه الظواهر لا تؤثر فقط على الدول، بل تمتد تأثيراتها لتشمل المجتمعات، العائلات والأشخاص بشكل مباشر. حيث تدمر الأمن والاستقرار وتترك آثاراً عميقة وسلبية على حياة الناس.</p>
+                    
+                    <p>المشكلة تبدأ عادةً بمجرد فكرة أو كلمة متطرفة، ثم تتطور لتصبح سلوكاً أو فكراً عدوانياً يهدد حياة الأبرياء ويهدد نسيج المجتمع بأكمله.</p>
+                </div>
+                
+                <div class="idea-section">
+                    <h3>هدف البحث (Thesis):</h3>
+                    <p>بحثنا يهدف إلى توضيح معنى التطرف الفكري والإرهاب، دراسة أسبابهم المتعددة وآثارهم الخطيرة، مع إبراز دور المجتمع في مواجهتهم والتوعية ضدهم للحد من انتشارهم.</p>
+                </div>
+                
+                <div class="image-gallery">
+                    <div class="gallery-item image-1">
+                        <div class="image-placeholder">
+                            <i class="fas fa-globe-americas" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <div>التهديد العالمي للإرهاب</div>
+                        </div>
+                    </div>
+                    <div class="gallery-item image-2">
+                        <div class="image-placeholder">
+                            <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 1rem;"></i>
+                            <div>التطرف الفكري كمرحلة تمهيدية</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- الفكرة الأولى: مفهوم الإرهاب -->
+            <section class="content-section">
+                <h2><span class="idea-number">1</span> مفهوم الإرهاب</h2>
+                
+                <div class="idea-section">
+                    <h3>ما هو الإرهاب؟</h3>
+                    <p>الإرهاب هو سلوك عدواني يعتمد على استخدام العنف أو التهديد به، يمارسه أفراد أو جماعات بهدف نشر الخوف والرعب بين الناس لتحقيق أهداف معينة سواء كانت سياسية أو فكرية أو دينية.</p>
+                    
+                    <p>يعد الإرهاب من أخطر الجرائم لأنه لا يستهدف شخصاً معيناً بل المجتمع كاملاً، حيث يعتمد على تخويف الأبرياء وهدم الاستقرار وبث القلق بين الناس.</p>
+                </div>
+                
+                <div class="idea-section">
+                    <h3>قصة الإرهاب وكيف وصلنا إليه؟</h3>
+                    <p>على عكس ما يعتقد المعظم، فالإرهاب ليس وليد عصرنا هذا فقد وجد منذ قديم الأزل بأشكال مختلفة عما هو عليه اليوم. استخدم سابقاً من قبل بعض الجماعات للضغط السياسي أو محاولة فرض السيطرة لتحقيق أهدافهم.</p>
+                    
+                    <p>مثال على ذلك: الجيش الجمهوري الأيرلندي (IRA) الذي قام بعمليات عنف في بريطانيا بهدف الضغط على الحكومة البريطانية لتحقيق مطالب سياسية تتعلق باستقلال إيرلندا الشمالية.</p>
+                </div>
+                
+                <div class="idea-section">
+                    <h3>موقف الإسلام من الإرهاب</h3>
+                    <p>يرفض الإسلام الإرهاب رفضاً قاطعاً، لأنه دين يقوم أساساً على السلام والعدل واحترام النفس البشرية. فقد دعا الإسلام إلى حفظ حياة الإنسان، وحرّم القتل والاعتداء وترويع الآمنين.</p>
+                    
+                    <p>يتضح من الآيات القرآنية والأحاديث النبوية أن الإسلام يرفض الإرهاب رفضاً قاطعاً، لأنه يقوم على العنف وقتل الأبرياء وترويع الآمنين، بينما يدعو الإسلام إلى السلام والرحمة وحفظ النفس البشرية.</p>
+                </div>
+            </section>
+            
+            <!-- الفكرة الثانية: مفهوم التطرف الفكري -->
+            <section class="content-section">
+                <h2><span class="idea-number">2</span> مفهوم التطرف الفكري</h2>
+                
+                <div class="idea-section">
+                    <h3>ما هو التطرف الفكري؟</h3>
+                    <p>التطرف الفكري هو التمسك بأفكار متشددة ومتطرفة ورفض أي رأي أو فكرة أخرى، مما يؤدي إلى التعصب وعدم تقبل الآخرين. غالباً ما يتحول هذا الفكر المتطرف إلى أفعال ضارة بالمجتمع.</p>
+                </div>
+                
+                <div class="idea-section">
+                    <h3>قصة التطرف الفكري وكيف وصلنا إليه؟</h3>
+                    <p>التطرف الفكري ليس وليد عصرنا الحالي، فقد وجد منذ القدم بأشكال مختلفة نتيجة اختلاف الأفكار والمعتقدات. ومع مرور الوقت، أصبح التطرف الفكري أكثر خطورة بسبب عوامل متعددة.</p>
+                </div>
+                
+                <div class="idea-section">
+                    <h3>موقف الإسلام من التطرف الفكري</h3>
+                    <p>الإسلام يرفض التطرف الفكري بكل أشكاله، لأنه يقوم على التعصب والكراهية ورفض الآخرين، بينما يدعو الإسلام إلى الوسطية والاعتدال وتقبل الرأي الآخر.</p>
+                    
+                    <p>قال النبي ﷺ: "يسروا ولا تعسروا، وبشروا ولا تنفروا" وهذا يدل على أن الإسلام يدعو إلى الاعتدال والرحمة في كل جوانب الحياة، ولا يدعو للتشدد الفكري.</p>
+                </div>
+            </section>
+            
+            <!-- الفكرة الثالثة: الربط والعلاقة بين التطرف والإرهاب -->
+            <section class="content-section">
+                <h2><span class="idea-number">3</span> الربط والعلاقة بين التطرف والإرهاب</h2>
+                
+                <div class="idea-section">
+                    <p>توجد علاقة وثيقة بين التطرف والإرهاب، حيث يُعد التطرف في كثير من الحالات المرحلة الفكرية التي قد تسبق التحول إلى السلوك الإرهابي. ومع ذلك، فالمفهومان غير متطابقين.</p>
+                    
+                    <div class="causes-grid">
+                        <div class="cause-item">
+                            <h4><i class="fas fa-brain cause-icon"></i> التطرف كقاعدة فكرية للإرهاب</h4>
+                            <p>الفكر المتشدد يخلق بيئة نفسية وعقلية تُبرر استخدام العنف، إذ يرى الفرد المتطرف أن أهدافه سامية وتستحق التضحية.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-forward cause-icon"></i> مرحلة التمهيد</h4>
+                            <p>كثير من الدراسات تشير إلى أن التحول إلى الإرهاب يمر غالباً بمرحلة "التطرف"، حيث يتم إعادة تشكيل قناعات الفرد تدريجياً حتى يصبح العنف خياراً مقبولاً لديه.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-balance-scale cause-icon"></i> التمييز بين المفهومين</h4>
+                            <p>ليس كل متطرف يمارس الإرهاب، لكن معظم الإرهابيين يتبنون أفكاراً متطرفة. هذا يعني أن التطرف شرط محتمل لكنه ليس شرطاً كافياً لحدوث الإرهاب.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- الفكرة الرابعة: الأسباب الاجتماعية -->
+            <section class="content-section">
+                <h2><span class="idea-number">4</span> الأسباب الاجتماعية للتطرف الفكري والإرهاب</h2>
+                
+                <div class="idea-section">
+                    <div class="causes-grid">
+                        <div class="cause-item">
+                            <h4><i class="fas fa-user-slash cause-icon"></i> التهميش الاجتماعي</h4>
+                            <p>شعور الفرد بأنه مستبعد أو غير معترف به داخل المجتمع يمكن أن يولد الإحباط والعداء، ما يجعله أكثر قابلية لتبني أفكار متشددة.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-money-bill-wave cause-icon"></i> الفقر والبطالة</h4>
+                            <p>الظروف الاقتصادية الصعبة قد تؤدي إلى الإحساس بالظلم وفقدان الأمل، مما يسهل استقطاب الشباب من قبل جماعات متطرفة تستغل احتياجاتهم.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-graduation-cap cause-icon"></i> ضعف التعليم أو غياب الوعي</h4>
+                            <p>قلة التفكير النقدي وسهولة التأثر بالمعلومات المضللة تساعد على انتشار الأفكار المتشددة.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-home cause-icon"></i> التفكك الأسري</h4>
+                            <p>غياب الرقابة الأسرية أو الدعم العاطفي قد يدفع بعض الشباب للبحث عن الانتماء في جماعات متطرفة.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- الفكرة الخامسة: الأسباب الدينية -->
+            <section class="content-section">
+                <h2><span class="idea-number">5</span> الأسباب الدينية للتطرف الفكري والإرهاب</h2>
+                
+                <div class="idea-section">
+                    <p>تُعد الأسباب الدينية من أكثر الأسباب تأثيراً في انتشار التطرف الفكري والإرهاب، نظراً لما للدين من مكانة كبيرة في نفوس الأفراد وقدرته على التأثير في سلوكهم وأفكارهم.</p>
+                    
+                    <div class="causes-grid">
+                        <div class="cause-item">
+                            <h4><i class="fas fa-book-open cause-icon"></i> التفسير الخاطئ للنصوص</h4>
+                            <p>فهم النصوص الدينية فهماً خاطئاً أو تفسيرها بطريقة سطحية أو متشددة، بعيداً عن مقاصدها الحقيقية التي تقوم في الأساس على الرحمة والعدل والتسامح.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-school cause-icon"></i> ضعف التعليم الديني الصحيح</h4>
+                            <p>غياب التعليم الديني الصحيح يؤدي إلى سهولة التأثر بالأفكار المتشددة، خاصة بين فئة الشباب.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-user-tie cause-icon"></i> استغلال الدين لتحقيق أهداف سياسية</h4>
+                            <p>تقوم بعض الجماعات باستخدام الدين كغطاء لتجنيد الأفراد والسيطرة عليهم فكرياً، ثم توجيههم نحو تنفيذ أعمال إرهابية.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- الفكرة السادسة: الأسباب السياسية -->
+            <section class="content-section">
+                <h2><span class="idea-number">6</span> الأسباب السياسية للتطرف الفكري والإرهاب</h2>
+                
+                <div class="idea-section">
+                    <p>تلعب الأسباب السياسية دوراً محورياً في نشأة وانتشار التطرف الفكري والإرهاب، حيث يرتبط هذا النوع من التطرف ارتباطاً وثيقاً بالظروف السياسية غير العادلة التي يعيشها الأفراد داخل المجتمعات.</p>
+                    
+                    <div class="causes-grid">
+                        <div class="cause-item">
+                            <h4><i class="fas fa-gavel cause-icon"></i> الظلم السياسي</h4>
+                            <p>غياب العدالة الاجتماعية يؤدي إلى شعور المواطنين بالظلم والقهر، خاصة عندما يشعر الفرد بأن حقوقه مسلوبة.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-ban cause-icon"></i> القمع السياسي</h4>
+                            <p>تقييد حرية التعبير ومنع المشاركة السياسية يؤدي إلى خلق حالة من الإحباط واليأس، خصوصاً لدى فئة الشباب.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-fist-raised cause-icon"></i> الصراعات السياسية والحروب</h4>
+                            <p>النزاعات المسلحة تؤدي إلى انهيار مؤسسات الدولة وانتشار الفوضى، مما يسمح للجماعات المتطرفة بالظهور والتمدد.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- الفكرة السابعة: الأسباب الفكرية والثقافية -->
+            <section class="content-section">
+                <h2><span class="idea-number">7</span> الأسباب الفكرية والثقافية للتطرف الفكري والإرهاب</h2>
+                
+                <div class="idea-section">
+                    <p>تُعد الأسباب الفكرية والثقافية من أهم العوامل التي تؤدي إلى انتشار التطرف الفكري والإرهاب، حيث يبدأ التطرف غالباً من فكرة منحرفة أو فهم خاطئ يتم ترسيخه في عقول الأفراد.</p>
+                    
+                    <div class="causes-grid">
+                        <div class="cause-item">
+                            <h4><i class="fas fa-brain cause-icon"></i> ضعف الوعي الثقافي</h4>
+                            <p>انتشار الجهل وغياب التفكير النقدي يجعل بعض الأفراد أكثر قابلية لتصديق الأفكار المتطرفة دون مناقشتها أو التحقق من صحتها.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-times-circle cause-icon"></i> الانغلاق الفكري</h4>
+                            <p>رفض الآخر وعدم تقبل الاختلاف في الرأي أو الثقافة يساهم في تكوين بيئة خصبة للتطرف.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-tv cause-icon"></i> دور وسائل الإعلام</h4>
+                            <p>بعض الوسائل الإعلامية ومواقع التواصل الاجتماعي تلعب دوراً خطيراً في نشر الأفكار المتطرفة، من خلال تزييف الوعي أو ترويج خطاب الكراهية.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- الفكرة الثامنة: الأسباب الاقتصادية -->
+            <section class="content-section">
+                <h2><span class="idea-number">8</span> الأسباب الاقتصادية للتطرف الفكري والإرهاب</h2>
+                
+                <div class="idea-section">
+                    <p>تلعب الأوضاع الاقتصادية دوراً كبيراً في دفع بعض الأفراد نحو التطرف الفكري والإرهاب، خاصة في المجتمعات التي تعاني من الفقر والبطالة وغياب العدالة الاجتماعية.</p>
+                    
+                    <div class="causes-grid">
+                        <div class="cause-item">
+                            <h4><i class="fas fa-hands-helping cause-icon"></i> الفقر والظروف المعيشية الصعبة</h4>
+                            <p>الشخص الذي يعاني من ظروف معيشية صعبة، ويفقد الأمل في تحسين مستقبله، يكون أكثر عرضة للوقوع تحت تأثير الجماعات المتطرفة.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-money-check-alt cause-icon"></i> استغلال الحاجة للمال</h4>
+                            <p>تستغل الجماعات الإرهابية حاجة الأفراد للمال، فتقوم بإغرائهم بالمساعدات المادية أو الوعود بتحسين أوضاعهم المعيشية مقابل الانضمام إليها.</p>
+                        </div>
+                        
+                        <div class="cause-item">
+                            <h4><i class="fas fa-chart-line cause-icon"></i> التفاوت الطبقي</h4>
+                            <p>التفاوت الكبير بين الطبقات الاجتماعية، وغياب تكافؤ الفرص، يؤدي إلى شعور بعض الأفراد بالظلم والتهميش، مما يدفعهم إلى الغضب والتمرد على المجتمع.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- دور المجتمع والجيش -->
+            <section class="content-section">
+                <h2>دور المجتمع المصري والجيش في محاربة الإرهاب والتطرف الفكري</h2>
+                
+                <div class="idea-section">
+                    <h3>دور الجيش المصري</h3>
+                    <p>الجيش المصري لعب دوراً محورياً في مواجهة الإرهاب، خاصة في سيناء والمناطق الحدودية. العمليات العسكرية شملت عمليات "سيناء 2018" وغيرها من الحملات الأمنية الشاملة التي استهدفت القضاء على البؤر الإرهابية. الجيش أيضاً ركز على تأمين الحدود ومنع تسلل العناصر الإرهابية وتهريب السلاح.</p>
+                    
+                    <p>بجانب الدور الأمني، القوات المسلحة ساهمت في التنمية الاقتصادية والاجتماعية في المناطق المتضررة، من خلال بناء البنية التحتية وتوفير الخدمات الأساسية، مما ساعد في تجفيف منابع التطرف التي تستغل الفقر والتهميش.</p>
+                </div>
+                
+                <div class="idea-section">
+                    <h3>دور المجتمع المصري</h3>
+                    <p>المجتمع المصري بمؤسساته المختلفة ساهم في المواجهة الفكرية للتطرف:</p>
+                    
+                    <div class="roles-grid">
+                        <div class="role-card">
+                            <i class="fas fa-university role-icon"></i>
+                            <h4>الأزهر الشريف</h4>
+                            <p>قاد حملات توعية واسعة لتصحيح المفاهيم الدينية المغلوطة ونشر الفكر الوسطي المعتدل، من خلال المؤتمرات الدولية والبرامج التعليمية ومواجهة الفتاوى المتطرفة.</p>
+                        </div>
+                        
+                        <div class="role-card">
+                            <i class="fas fa-home role-icon"></i>
+                            <h4>دور العائلة</h4>
+                            <p>كان أساسياً في التربية على القيم الصحيحة ومراقبة الأبناء وحمايتهم من الانجراف وراء الأفكار المتطرفة، خاصة على مواقع التواصل الاجتماعي.</p>
+                        </div>
+                        
+                        <div class="role-card">
+                            <i class="fas fa-school role-icon"></i>
+                            <h4>المؤسسات التعليمية</h4>
+                            <p>عملت على تطوير المناهج لتعزيز قيم التسامح والمواطنة ونبذ العنف، وتدريب المعلمين على اكتشاف علامات التطرف المبكرة.</p>
+                        </div>
+                        
+                        <div class="role-card">
+                            <i class="fas fa-tv role-icon"></i>
+                            <h4>الإعلام المصري</h4>
+                            <p>ساهم في فضح الممارسات الإرهابية وتوعية الرأي العام بخطورة الأفكار المتطرفة، وإبراز قصص ضحايا الإرهاب لتعزيز الرفض المجتمعي له.</p>
+                        </div>
+                        
+                        <div class="role-card">
+                            <i class="fas fa-hands-helping role-icon"></i>
+                            <h4>منظمات المجتمع المدني</h4>
+                            <p>نظمت برامج لإعادة تأهيل المتطرفين السابقين ودمجهم في المجتمع، ووفرت الدعم النفسي والاجتماعي للأسر المتضررة.</p>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-top: 1.5rem; padding: 1rem; background-color: #e8f4f8; border-radius: 8px; border-right: 4px solid var(--accent-blue);">
+                        <strong>ملاحظة:</strong> هذه الجهود المشتركة بين الجيش والمجتمع أسهمت في تقليص النشاط الإرهابي بشكل ملحوظ، لكن التحدي مستمر ويتطلب يقظة دائمة وعملاً متواصلاً على المستويين الأمني والفكري.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- الخاتمة -->
+            <section class="conclusion-section">
+                <h2>الخاتمة</h2>
+                <p>في ختام هذا البحث، يتضح أن الإرهاب والتطرف الفكري يمثلان تحدياً حقيقياً لا يستهدف أمن الدول فحسب، بل يستهدف النسيج الاجتماعي والقيم الإنسانية والحضارية التي بنتها المجتمعات عبر قرون من التطور.</p>
+                
+                <p>إن مواجهة هذه الظاهرة الخطيرة تتطلب نهجاً شاملاً ومتكاملاً لا يقتصر على الحلول الأمنية والعسكرية، بل يمتد ليشمل المواجهة الفكرية والثقافية والاجتماعية والاقتصادية.</p>
+                
+                <p>لقد أثبتت التجارب أن القوة وحدها لا تكفي لاستئصال جذور التطرف، فالأفكار لا تحارب بالسلاح فقط، وإنما بالفكر المستنير والتعليم الجيد والتنمية الشاملة. من هنا تبرز أهمية تضافر جهود جميع مؤسسات الدولة والمجتمع في بناء حصانة فكرية لدى الأجيال الشابة تحميهم من الانجراف وراء الأفكار الهدامة.</p>
+                
+                <p>إن المسؤولية في مواجهة الإرهاب والتطرف هي مسؤولية جماعية تقع على عاتق كل فرد في المجتمع، فكل منا يمكن أن يكون جزءاً من الحل من خلال نشر قيم التسامح والاعتدال، ورفض خطاب الكراهية والعنف، والمساهمة في بناء مجتمع قائم على العدل والمساواة وتكافؤ الفرص.</p>
+                
+                <p>وأخيراً، فإن الانتصار الحقيقي على الإرهاب لن يتحقق بالقضاء على الإرهابيين فقط، بل بالقضاء على الظروف والأسباب التي تنتج الإرهاب والتطرف. إنها معركة طويلة تتطلب صبراً وحكمة واستمرارية، لكنها معركة يجب أن ننتصر فيها من أجل مستقبل آمن ومزدهر للأجيال القادمة.</p>
+            </section>
+        </div>
+    </main>
+    
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-university" style="font-size: 2.5rem; color: var(--light-blue); margin-bottom: 1rem;"></i>
+                        <h3>بحث أكاديمي حول الإرهاب والتطرف الفكري</h3>
+                    </div>
+                </div>
+                
+                <div class="footer-info">
+                    <div class="footer-details">
+                        <p><i class="fas fa-university" style="margin-left: 8px;"></i> جامعة زويل للعلوم والتكنولوجيا</p>
+                        <p><i class="fas fa-graduation-cap" style="margin-left: 8px;"></i> قسم الدراسات الأمنية - الدفاع الشعبي</p>
+                        <p><i class="fas fa-calendar-alt" style="margin-left: 8px;"></i> الفصل الدراسي الثاني 2023/2024</p>
+                        <p><i class="fas fa-map-marker-alt" style="margin-left: 8px;"></i> جمهورية مصر العربية</p>
+                    </div>
+                    
+                    <div class="footer-contact">
+                        <h4>تواصل معنا</h4>
+                        <p><i class="fas fa-envelope" style="margin-left: 8px;"></i> s-yaseen.bilal@zewailcity.edu.eg</p>
+                        <p><i class="fas fa-phone" style="margin-left: 8px;"></i> +201040370349</p>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="download-section">
+                    <p>لتحميل نسخة كاملة من البحث بصيغة PDF</p>
+                    <button class="download-btn" id="downloadBtn">
+                        <i class="fas fa-download"></i> تحميل البحث
+                    </button>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p style="font-size: 0.9rem; opacity: 0.8;">جميع الحقوق محفوظة © 2023 جامعة زويل للعلوم والتكنولوجيا</p>
+                    <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 5px;">تم تطوير هذا البحث للأغراض الأكاديمية فقط</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <style>
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .footer-logo-section {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 2rem;
+            text-align: right;
+        }
+        
+        .footer-details p {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 1.05rem;
+        }
+        
+        .footer-contact h4 {
+            color: var(--light-blue);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            border-bottom: 2px solid rgba(177, 212, 224, 0.3);
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        
+        .footer-contact p {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 1.05rem;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .social-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--accent-blue);
+            transform: translateY(-3px);
+        }
+        
+        .download-section {
+            margin: 2rem 0;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            width: 100%;
+            max-width: 500px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .download-section p {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .download-btn {
+            background: linear-gradient(to right, var(--accent-blue), var(--secondary-dark));
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(46, 139, 192, 0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(46, 139, 192, 0.4);
+            background: linear-gradient(to right, var(--secondary-dark), var(--primary-dark));
+        }
+        
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+        }
+        
+        /* Responsive Design for Footer */
+        @media (max-width: 768px) {
+            .footer-info {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                text-align: center;
+            }
+            
+            .footer-details p, .footer-contact p {
+                justify-content: center;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .download-section {
+                padding: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            footer {
+                padding: 2rem 0 1rem;
+            }
+            
+            .footer-logo h3 {
+                font-size: 1.3rem;
+            }
+            
+            .footer-details p, .footer-contact p {
+                font-size: 1rem;
+            }
+            
+            .download-btn {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
+    <script>
+        // Download button functionality
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Create a confirmation modal
+            const modal = document.createElement('div');
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0,0,0,0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                z-index: 10000;
+            `;
+            
+            modal.innerHTML = `
+                <div style="background-color: white; padding: 2rem; border-radius: 10px; max-width: 500px; width: 90%; text-align: center;">
+                    <h3 style="color: var(--primary-dark); margin-bottom: 1rem;">تحميل البحث</h3>
+                    <p style="margin-bottom: 1.5rem;">يتم الآن تحضير نسخة PDF من البحث. قد تستغرق العملية بضع ثوانٍ.</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem;">
+                        <button id="confirmDownload" style="background-color: var(--accent-blue); color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer; font-weight: 600;">متابعة التحميل</button>
+                        <button id="cancelDownload" style="background-color: #e74c3c; color: white; border: none; padding: 0.8rem 1.5rem; border-radius: 5px; cursor: pointer; font-weight: 600;">إلغاء</button>
+                    </div>
+                </div>
+            `;
+            
+            document.body.appendChild(modal);
+            
+            document.getElementById('confirmDownload').addEventListener('click', function() {
+                // Create and trigger download
+                const content = document.documentElement.outerHTML;
+                const blob = new Blob([content], { type: 'text/html' });
+                const url = URL.createObjectURL(blob);
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'الإرهاب-والتطرف-الفكري-بحث-أكاديمي.html';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                
+                document.body.removeChild(modal);
+                
+                // Show success message
+                alert('تم بدء تحميل البحث بنجاح. شكراً لاهتمامك!');
+            });
+            
+            document.getElementById('cancelDownload').addEventListener('click', function() {
+                document.body.removeChild(modal);
+            });
+        });
+        
+        // Add scroll animation to footer
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        // Apply animation to footer
+        const footer = document.querySelector('footer');
+        footer.style.opacity = '0';
+        footer.style.transform = 'translateY(20px)';
+        footer.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        footerObserver.observe(footer);
+        
+        // Initialize footer as visible
+        setTimeout(() => {
+            footer.style.opacity = '1';
+            footer.style.transform = 'translateY(0)';
+        }, 100);
+    </script>
+</body>
+</html>
